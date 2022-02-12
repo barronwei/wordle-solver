@@ -39,7 +39,7 @@ class Solver():
                     self.hints[c] = set() 
                 if c in solution:
                     self.hints[c].add(i)
-        self.done = step == solution or len(self.guesses) == self.size
+        self.done = step == solution or len(self.guesses) == self.size + 1
         return
     def step(self, solution):
         assert(len(solution) == self.size)
